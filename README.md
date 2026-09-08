@@ -21,11 +21,14 @@ uvr5lite/
 ├── uvr5lite.bat                        # Windows 一键运行脚本
 ├── .gitignore
 ├── README.md
+├── shortcut.jpg                        # Windows 快捷方式示例图
 └── models/
     └── UVR-MDX-NET-Inst_HQ_3.onnx       # 唯一使用的分离模型
 ```
 
 默认情况下，`uvr5lite.py` 会在自己所在目录的 `models` 子目录中查找模型。也可以使用 `--model` 参数手动指定模型路径。
+
+`shortcut.jpg` 是 Windows 快捷方式参考图，可用于在桌面创建指向 `uvr5lite.bat` 的快捷方式。
 
 ---
 
@@ -37,7 +40,7 @@ uvr5lite/
 - 不提供输出路径时，自动生成带时间戳的文件名；
 - 无论是否提供输出路径，最后都会在标准输出中打印人声文件的绝对路径，便于其他脚本调用；
 - 只加载 `UVR-MDX-NET-Inst_HQ_3.onnx` 一个模型，体积和内存占用比完整 UVR5 小；
-- 模型推理固定使用 CPU，避免 CUDA、cuDNN 等额外环境配置。
+- 模型推理默认使用 CPU；可通过 `main()` 的 `device` 参数切换到 CUDA，GPU 不可用时自动回退 CPU。
 
 ---
 
