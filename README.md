@@ -61,7 +61,7 @@ uvr5lite/
 
 这个模型的主输出是伴奏。`uvr5lite` 会先推理出伴奏，再用原始音频减去伴奏，得到人声。这与 UVR5 使用该模型时的默认逻辑一致。
 
-> 模型文件来自你本地的 `D:\UVR5\models\MDX_Net_Models`。如果你计划公开发布本仓库，请先确认该模型的再分发许可。代码本身使用本仓库约定，但模型版权属于原 UVR5/模型作者。
+> 模型文件来自本地UVR5安装目录下的 `MDX_Net_Models`。
 
 ---
 
@@ -217,7 +217,7 @@ python uvr5lite.py song.flac
 python uvr5lite.py song.flac voice.wav
 python uvr5lite.py song.flac voice.wav music.wav
 python uvr5lite.py song.mp3 --vocals voice.mp3 --instrumental music.mp3
-python uvr5lite.py song.wav --model D:\models\UVR-MDX-NET-Inst_HQ_3.onnx
+python uvr5lite.py song.wav --model X:\models\UVR-MDX-NET-Inst_HQ_3.onnx
 ```
 
 ---
@@ -304,7 +304,7 @@ u5instrumental_20260908_123456.wav
 请确认模型文件位于 `uvr5lite\models` 目录中，或使用：
 
 ```bash
-python uvr5lite.py input.wav --model "D:\path\to\UVR-MDX-NET-Inst_HQ_3.onnx"
+python uvr5lite.py input.wav --model "X:\path\to\UVR-MDX-NET-Inst_HQ_3.onnx"
 ```
 
 ### 11.2 安装依赖失败
